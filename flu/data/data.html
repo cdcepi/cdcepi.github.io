@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Epidemic Prediction Initiative</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/maj_desi.css" rel="stylesheet">
+		
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> 
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"> Epidemic Prediction Initiative   <span class="label label-danger">BETA</span></a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+            		<li>
+                		<a href="http://www.hhs.gov/idealab/projects-item/epidemic-prediction-initiative/"> About</a>
+                </li>
+                <li><a id="login" href="#">Login</a></li>
+               	<li><a id="register" href="#">Register</a></li>
+								<li><a class="hidden" id="name" href="#"></a></li>
+								<li><a class="hidden" id="logout" href="#">Logout</a></li>
+								<li><div class="modal fade" id="dialog-container"></div></li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <nav class="collapse navbar-inverse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Influenza</a>
+                </li>
+                <li>
+                    <a href="targets.html"><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Targets</a>
+                </li>
+                <li class="active">
+                    <a href="data.html"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Data</a>
+                </li>
+                <li>
+                    <a href="evaluation.html"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Evaluation</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+ 
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+ 
+ 
+ 
+<div class="row panel panel-default">
+<div class="panel-heading">
+<h3>Data for forecasting and evaluation</h3>
+</div>
+<div class="panel-body">
+On this page, you can find influenza data for the United States that can be used to develop and evaluate predictive models. This includes <a href="#current">current data</a> that can be downloaded from CDC each week and <a href="#hist">historical data</a> including data that was available during each epidemiological week from 2009/10 to 2014/15.
+</div>
+</div>
+<div id="current" class="row panel panel-default panel-body">
+<h4><strong>Current ILINet Data</strong></h4>
+Current data on the weekly proportion of people seeing their health care provider for influenza-like illness (ILI) is reported through the <a href="http://www.cdc.gov/flu/weekly/overview.htm#outpatient" target="_blank">ILINet System</a> for the United States and for each <a href="http://www.hhs.gov/about/regionmap.html" target="_blank">HHS health region</a>. These data can be accessed directly from <a href="http://www.cdc.gov/flu/weekly/overview.htm#outpatient" target="_blank">CDC</a>. Alternatively the R package <a href="https://github.com/cran/cdcfluview">cdcfluview</a> (available from CRAN) can be used to access the data.
+</p>
+<p>To use this package, run the following code in R:</p>
+<pre class="r"><code>library(cdcfluview)
+usflu &lt;- get_flu_data(&quot;national&quot;, &quot;ilinet&quot;, years=1997:2015)
+regionflu &lt;- get_flu_data(&quot;HHS&quot;, sub_region=1:10, &quot;ilinet&quot;, years=1997:2015)</code></pre>
+</div>
+<div id="hist" class="row panel panel-default panel-body">
+<h4><strong>Historical ILINet Data (2009/10 to 2014/15)</strong></h4>
+This dataset provides national and regional ILINet data that was available at any given week in previous influenza seasons. For example, data in the 2013/14 file with Release_Week = 1342 includes all data for the 2013/14 season that was available during at week 42 of that season. <br /></br>
+
+<a class="btn btn-default btn-sm btn-primary" href="data/ILI_2009_2010.csv">Download 2009/10 </a>
+<a class="btn btn-default btn-sm btn-primary" href="data/ILI_2010_2011.csv">Download 2010/11 </a>
+<a class="btn btn-default btn-sm btn-primary" href="data/ILI_2011_2012.csv">Download 2011/12 </a>
+<a class="btn btn-default btn-sm btn-primary" href="data/ILI_2012_2013.csv">Download 2012/13 </a>
+<a class="btn btn-default btn-sm btn-primary" href="data/ILI_2013_2014.csv">Download 2013/14 </a>
+<a class="btn btn-default btn-sm btn-primary" href="data/ILI_2014_2015.csv">Download 2014/15 </a>
+</div>
+
+										  	</div>
+										</div>
+								</div>
+						</div>
+						
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- prevents navbar coverup upon within page navigation-->
+    <script>
+        $('a').click(function (e) {
+                     e.preventDefault();
+                     var href = $(this).attr('href');
+                     $(document).scrollTop( $(href).offset().top );
+                     window.scrollBy(0, -60);
+                     });
+    </script>
+    
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    
+		<script>
+		  (function () {
+		    var script = document.createElement("script");
+		    script.type = "text/javascript";
+		    script.src  = "../js/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+		    document.getElementsByTagName("head")[0].appendChild(script);
+		  })();
+		</script>
+
+</body>
+
+</html>

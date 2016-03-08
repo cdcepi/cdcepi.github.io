@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Epidemic Prediction Initiative</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/maj_desi.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html"> Epidemic Prediction Initiative   <span class="label label-danger">BETA</span></a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+            		<li>
+                		<a href="http://www.hhs.gov/idealab/projects-item/epidemic-prediction-initiative/"> About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <nav class="collapse navbar-inverse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Dengue</a>
+                </li>
+                <li>
+                    <a href="targets.html"><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Targets</a>
+                </li>
+                <li>
+                    <a href="data.html"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Dengue Data</a>
+                </li>
+                <li>
+                    <a href="climate.html"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Environmental Data</a>
+                </li>
+                <li class="active">
+                    <a href="population.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Population Data</a>
+                </li>
+                <li>
+                    <a href="submit.html"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Submit</a>
+                </li>
+                <li>
+                    <a href="evaluation.html"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Evaluation</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+                <div class="row">
+                		<div class="panel panel-default">
+                				<div class="panel-heading"><h4>Population data</h4></div>
+										  	<div class="panel-body">
+<p>This page contains data for the population sizes for
+<a href="#sanjuan">San Juan, Puerto Rico</a>
+and
+<a href="#iquitos">Iquitos, Peru</a>.
+</p>
+										 		</div>
+										</div>
+								</div>
+						</div>
+
+						<div class="container-fluid">
+								<div class="row">
+										<div class="panel panel-default">
+												<div class="panel-body" id="sanjuan">
+<p><strong>San Juan, Puerto Rico - 1990, 1999 to 2014</strong></p>
+<p>This dataset includes estimates for the population of the San Juan-Carolina-Caguas Metropolitan Statistical Area for 1990 and 1999-2014 from the U.S. Census Bureau:
+<a href="http://www.census.gov/popest/data/municipios/totals/1990s/tables/PR-99-1.txt">1990, 1999</a>,
+<a href="http://www.census.gov/popest/data/intercensal/puerto_rico/pr2010.html">2000-2009</a>, and
+<a href="http://www.census.gov/popest/data/municipios/asrh/2014/index.html">2010-2014</a>.
+</p>
+<a class="btn btn-default btn-md btn-primary" href="data/San_Juan_Population_Data.csv">Download Data</a>
+  											</div>
+										</div>
+								</div>
+						</div>
+
+						<div class="container-fluid">
+								<div class="row">
+										<div class="panel panel-default">
+												<div class="panel-body" id="iquitos">
+<p><strong>Iquitos, Peru - 2000 to 2014
+</strong></p>
+<p>This dataset includes estimates for the total population of the four districts in the metropolitan area of Iquitos (Iquitos, Punchana, Belen and San Juan Bautista) from the National Statistics Institute of Peru:
+<a href="http://webinei.inei.gob.pe:8080/SIRTOD/inicio.html#app=8d5c&49c3-selectedIndex=1&93f0-selectedIndex=1" target="_blank">2000-2014</a>.
+</p>
+<a class="btn btn-default btn-md btn-primary" href="data/Iquitos_Population_Data.csv">Download Data</a>
+
+  											</div>
+										</div>
+								</div>
+						</div>
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+		<!-- dynamically load mathjax for compatibility with self-contained -->
+		<script>
+		  (function () {
+		    var script = document.createElement("script");
+		    script.type = "text/javascript";
+		    script.src  = "../js/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+		    document.getElementsByTagName("head")[0].appendChild(script);
+		  })();
+		</script>
+
+</body>
+
+</html>

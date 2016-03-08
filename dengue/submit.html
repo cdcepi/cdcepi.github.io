@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Epidemic Prediction Initiative</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/maj_desi.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html"> Epidemic Prediction Initiative   <span class="label label-danger">BETA</span></a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+            		<li>
+                		<a href="http://www.hhs.gov/idealab/projects-item/epidemic-prediction-initiative/"> About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <nav class="collapse navbar-inverse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Dengue</a>
+                </li>
+                <li>
+                    <a href="targets.html"><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Targets</a>
+                </li>
+                <li>
+                    <a href="data.html"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Dengue Data</a>
+                </li>
+                <li>
+                    <a href="climate.html"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Environmental Data</a>
+                </li>
+            		<li>
+                    <a href="population.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Population Data</a>
+                </li>
+                <li class="active">
+                    <a href="submit.html"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Submit</a>
+                </li>
+                <li>
+                    <a href="evaluation.html"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Evaluation</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+                <div class="row">
+                		<div class="panel panel-default">
+                				<div class="panel-heading"><h4>How to submit forecasts</h4></div>
+										  	<div class="panel-body">
+                                                <p>Forecasts will be made in two stages. First, the training data should be used by each team to develop and select the optimal model for each prediction target and location:
+                                                <a href="#sanjuan">San Juan, Puerto Rico</a>
+                                                and
+                                                <a href="#iquitos">Iquitos, Peru</a>.
+                                                Once this has been accomplished, the team should write a brief
+                                                    <a href="#description">description of the model and data used</a>. If different models are used for different targets or locations, each model should be described. The team should also prepare forecasts for the years 2005-2009 using the selected model(s). For each of these four transmission seasons, forecasts should be made every 4 weeks (weeks 0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48) for each target. Each forecast should include a point estimate and a probability distribution. Note that forecasts should be made for peak incidence even after peak incidence has occurred. These forecasts reflect the probability that peak incidence has already occurred (e.g. late season forecasts should be non-zero if there is some chance of a second, higher peak).</br></br>
+
+                                                One “csv” file should be prepared for each location and each target using the supplied templates (Appendix 2). The initial model description and forecasts should be submitted to <a href="mailto:predict@cdc.gov?Subject=Dengue%20Forecasting%20Project" target="_top">predict@cdc.gov</a> by August 12, 2015. These forecasts will be used to verify that the format is correct and to provide metrics on fit to the training data.</br></br>
+
+                                                All teams with verified submissions by August 12, 2015, will receive the testing data by email in the same format as the training data on August 19, 2015. They will have two weeks to submit forecasts for the 2009-2013 testing period using the already selected model. These forecasts should use exactly the same model and same format as the first submission and must be submitted to <a href="mailto:predict@cdc.gov?Subject=Dengue%20Forecasting%20Project" target="_top">predict@cdc.gov</a> by September 2, 2015.</br></br>
+
+                                                IMPORTANT NOTE: Much of the data for 2009-2013 is currently accessible to researchers; it is therefore contingent upon the researcher to NOT use these data for model development or evaluation. The data are supplied only for “future” forecasts within the testing period. For example, forecasts made for the 2011/2012 season at Week 4 may use data from any date up to Week 4 of the 2011/2012 season, but no data of any type from later dates. The data may be used to dynamically update coefficients or covariates, but there should be no structural changes to the model and no consideration of data from Week 5 of that season or later.
+</p>
+										 		</div>
+										</div>
+								</div>
+						</div>
+
+						<div class="container-fluid">
+								<div class="row">
+										<div class="panel panel-default">
+												<div class="panel-body" id="sanjuan">
+                                                    <p><strong>San Juan, Puerto Rico - Training templates
+                                                    </strong></p>
+                                                    <a class="btn btn-default btn-md btn-primary" href="templates/template_peakweek_sanjuan_train.csv">Peak Week</a>
+                                                    <a class="btn btn-default btn-md btn-primary" href="templates/template_peakinc_sanjuan_train.csv">Peak Incidence</a>
+                                                    <a class="btn btn-default btn-md btn-primary" href="templates/template_seasoninc_sanjuan_train.csv">Season Incidence</a>
+  											</div>
+										</div>
+								</div>
+						</div>
+
+						<div class="container-fluid">
+								<div class="row">
+										<div class="panel panel-default">
+												<div class="panel-body" id="iquitos">
+                                                    <p><strong>Iquitos, Peru - Training templates
+                                                    </strong></p>
+                                                    <a class="btn btn-default btn-md btn-primary" href="templates/template_peakweek_iquitos_train.csv">Peak Week</a>
+                                                    <a class="btn btn-default btn-md btn-primary" href="templates/template_peakinc_iquitos_train.csv">Peak Incidence</a>
+                                                    <a class="btn btn-default btn-md btn-primary" href="templates/template_seasoninc_iquitos_train.csv">Season Incidence</a>
+  											</div>
+										</div>
+								</div>
+						</div>
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="panel panel-default">
+                                    <div class="panel-body" id="description">
+                                        <p><strong>Model description
+                                        </strong></p>
+                                        Once model development has been finished, each team should select their best model for future forecasts. Note again that there may be different models for different targets and locations, but only one for each target and location (though that may be an ensemble model). If different models are selected for different targets/locations, the description should include each of those models. The description should include the following components:</br></br>
+                                        <ol>
+                                        <li><strong>Team name:</strong> This should match the name used in the submission file names.</li>
+                                        <li>T<strong>eam members:</strong> List every person involved with the forecasting effort and their institution. Include the email address of the team leader.</li>
+                                        <li><strong>Agreement:</strong> Include the following statement: “By submitting these forecasts, I (we) indicate my (our) full and unconditional agreement to abide by the project's official rules and data use agreements.”</li>
+                                        <li><strong>Model description:</strong> Is the model mechanistic, statistical? Is it an instance of a known class of models? The description should include sufficient detail for another modeler to understand the approach being applied. It may include equations, but that is not necessary. If multiple models are used, describe each model and which target each model was used to predict.</li>
+                                        <li><strong>Variables:</strong> What data is used in the model? Historical dengue data? Weather data? Other data? List every variable used and its temporal relationship to the forecast (e.g. lag or order of autocorrelation). If multiple models are used specify which variables enter into each model.</li>
+                                        <li><strong>Computational resources:</strong> What programming languages/software tools were used to write and execute the forecasts?</li>
+                                        <li><strong>Publications:</strong> Does the model derive directly from previously published work? If so please include references.</li>
+                                        </ol>
+</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- prevents navbar coverup upon within page navigation-->
+    <script>
+        $('a').click(function (e) {
+                     e.preventDefault();
+                     var href = $(this).attr('href');
+                     $(document).scrollTop( $(href).offset().top );
+                     window.scrollBy(0, -60);
+                     });
+    </script>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

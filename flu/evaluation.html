@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Epidemic Prediction Initiative</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/maj_desi.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html"> Epidemic Prediction Initiative   <span class="label label-danger">BETA</span></a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+            		<li>
+                		<a href="http://www.hhs.gov/idealab/projects-item/epidemic-prediction-initiative/"> About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <nav class="collapse navbar-inverse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Influenza</a>
+                </li>
+                <li>
+                    <a href="forecasts.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Forecasts</a>
+                </li>
+                <li>
+                    <a href="targets.html"><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Targets</a>
+                </li>
+                <li>
+                    <a href="data.html"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Data</a>
+                </li>
+                <li class="active">
+                    <a href="evaluation.html"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Evaluation</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+
+<div class="row panel panel-default">
+<div class="panel-heading">
+<h3>Forecast Evaluation</h3>
+</div>
+<div class="panel-body">
+All forecasts will be evaluated using the weighted observations pulled from the ILINet system in week 28, and the <a href="#logarithmic-score">logarithmic score</a> will be used to measure the accuracy of the probability distribution of a forecast. Logarithmic scores will be averaged across different time periods, the seasonal targets, the four-week ahead targets, and locations to provide both specific and generalized measures of model accuracy. Unlike last year, forecast accuracy will be measured by log score only. Nonetheless, forecasters are requested to continue to submit point predictions, which should aim to minimize the <a href="#absolute-error">absolute error</a> (AE).
+</div>
+</div>
+<div id="logarithmic-score" class="row panel panel-default panel-body">
+<h4><strong>Logarithmic Score</strong></h4>
+<p>If <span class="math">\(\mathbf{p}\)</span> is the set of binned probabilities for a given forecast, and <span class="math">\(p_{i}\)</span> is the probability assigned to the bin containing the observed outcome, <span class="math">\(i\)</span>, the logarithmic score is:</p>
+<p><span class="math">\(S(\mathbf{p},i) = ln(p_{i})\)</span></p>
+<p>The probability assigned to that correct bin (based on the weighted ILINet value) plus the probability assigned to the preceding and proceeding bins will be summed to determine the probability assigned to the observed outcome:</p>
+<p><span class="math">\(S(\mathbf{p},i) = ln(p_{i-1} + p_{i} + p_{i+1})\)</span></p>
+<p>If the correct bin is the first or last bin, the probabilities will be summed over the first three or last three bins, respectively. In the case of multiple peak weeks, the probability assigned to the bins containing the peak weeks and the preceding and proceeding bins will be summed. Undefined natural logs (which occur when the probability assigned to the observed outcomes was 0) will be assigned a score of -10. Forecasts which are not submitted (e.g., if a week is missed) or that are incomplete (e.g., sum of probabilities greater than 1.1) will also be assigned a score of -10.</p>
+<p><strong>Example</strong>: A forecast predicts there is a probability of 0.2 (i.e., a 20% chance) that the flu season starts on week 44, a 0.3 probability that it starts on week 45, and a 0.1 probability that it starts on week 46 with the other 0.4 (40%) distributed across other weeks according to the forecast. Once the flu season has started, the prediction can be evaluated, and the ILINet data show that the flu season started on week 45. The probabilities for week 44, 45, and 46 would be summed, and the forecast would receive a score of <em>ln</em>(0.6) = -0.51. If the season started on another week, the score would be calculated on the probability assigned to that week plus the values assigned to the preceding and proceeding week.</p>
+<p><strong>References</strong></p>
+<ul>
+<li><p>Gneiting T and AE Raftery. (2007) Strictly proper scoring rules, prediction, and estimation. Journal of the American Statistical Association. 102(477):359-378. Available at: <a href><a href="https://www.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf" class="uri">https://www.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf</a>.</a>.</p></li>
+<li>Rosenfeld R, J Grefenstette, and D Burke. (2012) A Proposal for Standardized Evaluation of Epidemiological Models. Available at: <a href><a href="http://delphi.midas.cs.cmu.edu/files/StandardizedEvaluation_Revised_12-11-09.pdf" class="uri">http://delphi.midas.cs.cmu.edu/files/StandardizedEvaluation_Revised_12-11-09.pdf</a></a>.</li>
+</ul>
+</div>
+<div id="absolute-error" class="row panel panel-default panel-body">
+<h4><strong>Absolute Error</strong></h4>
+<p>Absolute error (AE) is the absolute difference between the forecast <span class="math">\(\hat{y}\)</span> and the observation <span class="math">\(y\)</span>:</p>
+<p><span class="math">\(AE(\hat{y}, y)=|\hat{y}-y|\)</span></p>
+For example, a forecast predicts that the flu season will start on week 45; flu season actually begins on week 46. The absolute error of the prediction is |45-46| = 1 week.
+</div>
+
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- prevents navbar coverup upon within page navigation-->
+    <script>
+        $('a').click(function (e) {
+                     e.preventDefault();
+                     var href = $(this).attr('href');
+                     $(document).scrollTop( $(href).offset().top );
+                     window.scrollBy(0, -60);
+                     });
+    </script>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+		<!-- dynamically load mathjax for compatibility with self-contained -->
+		<script>
+		  (function () {
+		    var script = document.createElement("script");
+		    script.type = "text/javascript";
+		    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+		    document.getElementsByTagName("head")[0].appendChild(script);
+		  })();
+		</script>
+
+
+</body>
+
+</html>

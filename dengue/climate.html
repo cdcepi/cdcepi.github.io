@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Epidemic Prediction Initiative</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/maj_desi.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html"> Epidemic Prediction Initiative   <span class="label label-danger">BETA</span></a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+            		<li>
+                		<a href="http://www.hhs.gov/idealab/projects-item/epidemic-prediction-initiative/"> About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <nav class="collapse navbar-inverse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Dengue</a>
+                </li>
+                <li>
+                    <a href="targets.html"><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Targets</a>
+                </li>
+                <li>
+                    <a href="data.html"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Dengue Data</a>
+                </li>
+               <li class="active">
+                    <a href="climate.html"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Environmental Data</a>
+                </li>
+            		<li>
+                    <a href="population.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Population Data</a>
+                </li>
+                <li>
+                    <a href="submit.html"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Submit</a>
+                </li>
+                <li>
+                    <a href="evaluation.html"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Evaluation</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+                <div class="row">
+                		<div class="panel panel-default">
+                				<div class="panel-heading"><h4>Environmental data</h4></div>
+										  	<div class="panel-body">
+                                                <p>NOAA data sources are compiled for easy comparison with dengue health data. These environmental data are from Iquitos, Peru and San Juan, Puerto Rico to correspond with the available dengue data. All data are provided in a csv format for easy access. All data are maintained and quality controlled by the programs that manage these data sources. Please be aware that data may still potentially contain quality issues and any user should inspect these data before use.<br/><br/>
+
+                                                Environmental data provided for this study are from a variety of sources (ground observations, remote sensing, and reanalysis). Each source has different limitations and quality issues. Users of these data should be careful to utilize data that provide the most confidence for the actual representation of the surrounding conditions. Ground observations are generally an optimal representation of the actual local conditions. Remotely sensed observations are generally an excellent observation of precipitation and vegetation conditions for a location. Reanalysis data are a good representation of the conditions of a given area, especially when other data sources are not available.<br/><br/>
+
+                                              Users should also be aware that these environmental data are at varying spatial scales. Station data are at a point-based estimate of the local climate conditions; whereas, the reanalysis and remotely sensed data are grid cells. For more information, please read the following descriptions to learn more about the differences.<br/><br/>
+
+                                              Below is a description of the environmental data sources that are provided for analysis with dengue data.
+</p>
+										 		</div>
+										</div>
+								</div>
+						</div>
+
+						<div class="container-fluid">
+								<div class="row">
+										<div class="panel panel-default">
+												<div class="panel-body" id="sanjuan">
+
+<strong>Station data - Temperature and precipitation - NOAA's GHCN daily climate data
+</strong><br/><br/>
+<p>
+The GHCN stations with daily temperature and precipitation data are available for both locations.<br/><br/>
+
+Additional data access and full description of data can be found here:
+<a href="https://www.ncdc.noaa.gov/oa/climate/ghcn-daily/">https://www.ncdc.noaa.gov/oa/climate/ghcn-daily/</a><br/><br/>
+
+Individual stations that are inside or near the city are listed here:
+
+San Juan, Puerto Rico: RQW00011641; Lat = 18.4325; Long = -66.0108; Elevation = 2.7; Start = 1956; End = 2015<br/><br/>
+Iquitos, Peru: PE000084377; Lat = -3.783; Long = -73.3; Elevation = 126; Start = 1973; End = 2015
+
+<br/><br/>
+Temperature values are in Celsius; Precipitation values are in mm.<br/><br/>
+
+Values include Maximum Temperature, Minimum Temperature, Daily Average Temperature, Diurnal Temperature Range, and Daily Precipitation.<br/><br/>
+
+*Be aware that some stations may have missing days and/or missing values. Missing values are identified as -9999. Missing days are not identified in the record.  <br/><br/>
+
+*Station observations for San Juan are complete and have few missing values. However, there are multiple missing station observations for Iquitos and users should refer to other data sources provided.
+<br/><br/>
+
+<strong>Download data (naming convention = CityNameIDENTIFICATION_NUMBER.csv):</strong>
+<br/><br/>
+<a class="btn btn-default btn-md btn-primary" href="http://dengueforecasting.noaa.gov/StationData/IquitosPE000084377.csv">Iquitos</a>
+<a class="btn btn-default btn-md btn-primary" href="http://dengueforecasting.noaa.gov/StationData/SanJuanRQW00011641.csv">San Juan</a>
+
+  											</div>
+										</div>
+								</div>
+						</div>
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="panel panel-default">
+                                    <div class="panel-body" id="iquitos">
+                                        <strong> Satellite precipitation - Precipitation - NOAA's CDR PERSIANN Precipitation Product
+                                        </strong><br/><br/>
+                                        <p>
+                                        PERSIANN is a global climatological data record of precipitation from remote sensing information using an artificial neural network. These data are available for each city on a daily basis from 1983-present.<br/><br/>
+
+                                        The resolution of this data product is 0.25x0.25 degree.<br/><br/>
+
+                                        Additional data access and full description of data can be found here:
+                                        <a href="http://www.ncdc.noaa.gov/cdr/operationalcdrs.html">http://www.ncdc.noaa.gov/cdr/operationalcdrs.html</a><br/><br/>
+
+                                        Precipitation data are from the grid surrounding the station located in the city.<br/><br/>
+
+                                        Precipitation values are reported as daily sums in mm.<br/><br/>
+
+                                        *Missing values are listed as -9999.<br/><br/>
+
+                                      	<strong>Download data (naming convention = LOCATION_Precip.csv):</strong>
+<br/><br/>
+<a class="btn btn-default btn-md btn-primary" href="http://dengueforecasting.noaa.gov/SatellitePrecip/Iquitos_Precip.xlsx">Iquitos</a>
+<a class="btn btn-default btn-md btn-primary" href="http://dengueforecasting.noaa.gov/SatellitePrecip/SanJuan_Precip.xlsx">San Juan</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+						<div class="container-fluid">
+								<div class="row">
+										<div class="panel panel-default">
+												<div class="panel-body" id="iquitos">
+<strong> Reanalysis - Temperature and precipitation - NOAA's NCEP Climate Forecast System Reanalysis
+</strong><br/><br/>
+<p>
+Climate Forecast System Reanalysis is global, high-resolution, coupled atmosphere-ocean-land surface-sea ice system to provide the best estimate of the state of these coupled domains over the period of record.<br/><br/>
+
+Data are available from 1979-present.<br/><br/>
+
+Additional data access and full description of data can be found here:
+<a href="http://rda.ucar.edu/datasets/ds093.0/#metadata/detailed.html?_do=y">http://rda.ucar.edu/datasets/ds093.0/#metadata/detailed.html?_do=y</a><br/><br/>
+
+CFSR provides a variety of data that are not easily accessible from other data sources. This includes relative humidity, specific humidity and dew point.<br/><br/>
+
+Temperature data values are available in Kelvin.<br/><br/>
+
+Resolution of the grid is 0.5 degree.<br/><br/>
+
+<strong>Download data (naming convention = LOCATION.csv):</strong>
+<br/><br/>
+<a class="btn btn-default btn-md btn-primary" href="http://dengueforecasting.noaa.gov/Reanalysis/Iquitos.xlsx">Iquitos</a>
+<a class="btn btn-default btn-md btn-primary" href="http://dengueforecasting.noaa.gov/Reanalysis/SanJuan.xlsx">San Juan</a>
+
+  											</div>
+										</div>
+								</div>
+						</div>
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="panel panel-default">
+                                    <div class="panel-body" id="iquitos">
+                                        <strong> Satellite vegetation - Normalized difference vegetation index (NDVI) - NOAA's CDR Normalized Difference Vegetation Index
+                                        </strong><br/><br/>
+                                        <p>
+                                        NDVI CDR is a global climatological data record of vegetation. These data are available for each city on a weekly basis from 1981-present.<br/><br/>
+
+                                        The resolution of the product is at 0.05x0.05 degree.<br/><br/>
+
+                                        Additional data access and full description of data can be found here: <a href="http://www.ncdc.noaa.gov/cdr/operationalcdrs.html">http://www.ncdc.noaa.gov/cdr/operationalcdrs.html</a><br/><br/>
+
+                                        Four pixels closest to the city centroid are provided for evaluation of vegetation change.<br/><br/>
+
+                                        30-year climatologies were also provided for these sites.<br/><br/>
+
+                                        *NDVI data are provided without quality flagged data removed. Quality flagged data are provided at the CDR webpage.
+                                        <br/><br/>
+
+                                        <strong>Download raw data (naming convention = LOCATION_noqc.csv):</strong>
+                                        <br/><br/>
+                                        <a class="btn btn-default btn-md btn-primary" href="http://dengueforecasting.noaa.gov/NDVI/iquitos_noqc.csv">Iquitos</a>
+                                        <a class="btn btn-default btn-md btn-primary" href="http://dengueforecasting.noaa.gov/NDVI/sanJuan_noqc.csv">San Juan</a>
+                                        <br/><br/>
+
+                                        <strong>Download raw climatologies (naming convention = LOCATION_clim_noqc.csv):</strong>
+                                      	<br/><br/>
+                                        <a class="btn btn-default btn-md btn-primary" href="http://dengueforecasting.noaa.gov/NDVI/iquitos_clim_noqc.csv">Iquitos</a>
+                                        <a class="btn btn-default btn-md btn-primary" href="http://dengueforecasting.noaa.gov/NDVI/sanJuan_clim_noqc.csv">San Juan</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- prevents navbar coverup upon within page navigation-->
+    <script>
+        $('a').click(function (e) {
+                     e.preventDefault();
+                     var href = $(this).attr('href');
+                     $(document).scrollTop( $(href).offset().top );
+                     window.scrollBy(0, -60);
+                     });
+    </script>
+
+    <!-- jQuery -->
+    <script src="../js/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

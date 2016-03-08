@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Epidemic Prediction Initiative</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/maj_desi.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html"> Epidemic Prediction Initiative   <span class="label label-danger">BETA</span></a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+            		<li>
+                		<a href="http://www.hhs.gov/idealab/projects-item/epidemic-prediction-initiative/"> About</a>
+                </li>
+<!--                <li>
+                		<a href="bootstrap-elements.html"> Contact </a>
+                </li> -->
+            </ul>
+        </nav>
+
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <nav class="collapse navbar-inverse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Dengue</a>
+                </li>
+                <li class="active">
+                    <a href="targets.html"><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Targets</a>
+                </li>
+                <li>
+                    <a href="data.html"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Dengue Data</a>
+                </li>
+                <li>
+                    <a href="climate.html"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Environmental Data</a>
+                </li>
+            		<li>
+                    <a href="population.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Population Data</a>
+                </li>
+                <li>
+                    <a href="submit.html"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Submit</a>
+                </li>
+                <li>
+                    <a href="evaluation.html"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Evaluation</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <div class="row">
+                		<div class="panel panel-default">
+                			<div class="panel-heading"><h4>Timing of peak incidence</h4></div>
+										  <div class="panel-body">
+<p><strong>DEFINITION</strong></p>
+
+<p><strong>The week when the highest incidence of dengue occurs during the transmission season.</strong></p>
+<p>Forecast the week when weekly dengue incidence is highest, specifically the variable <i>total_cases</i> in the dataset. The week corresponds to the week of the transmission season (<i>season_week</i> in the dataset). This week corresponds to the number of weeks after the historically lowest incidence week of the year
+for each location.</p>
+
+<p><strong>MOTIVATION</strong></p>
+
+<p>A forecast of the week of peak incidence can help health officials target prevention messages
+and activities. It could also help hospital personnel make approriate decisions about resource
+allocation (e.g. staffing) to ensure optimal patient care.</p>
+										  </div>
+										</div>
+								</div>
+
+                <div class="row">
+                		<div class="panel panel-default">
+                			<div class="panel-heading"><h4>Maximum weekly incidence</h4></div>
+										  <div class="panel-body">
+<p><strong>DEFINITION</strong></p>
+
+<p><strong>The number of dengue cases reported during the week when incidence peaks.</strong></p>
+<p>Forecast the peak weekly incidence for the transmission season. This is the maximun value of <i>total_cases</i> for each <i>season</i> in the dataset.</p>
+
+<p><strong>MOTIVATION</strong></p>
+
+<p>A forecast of the peak incidence can help health officials anticipate the burden of disease. If transmission is intense, more resources may be allocated to help control the epidemic. It can also help hospital personnel prepare for surges in visits to ensure that all patients receive optimal care.</p>
+										  </div>
+										</div>
+								</div>
+
+                <!-- /.row -->
+                <div class="row">
+                		<div class="panel panel-default">
+                			<div class="panel-heading"><h4>Total number of dengue cases in a transmission season</h4></div>
+										  <div class="panel-body">
+<p><strong>DEFINITION</strong></p>
+
+<p><strong>The total number of dengue cases reported in the transmission season.</strong></p>
+<p>Forecast the total number of dengue cases reported in a transmission season. This is the sum of <i>total_cases</i> for each <i>season</i> in the dataset.
+
+
+<p><strong>MOTIVATION</strong></p>
+
+<p>A forecast for the total number of cases in a transmission season can help with long-term resource allocation. If many cases are expected throughout the season, prevention and control resources may be allocated differently than if a large transient surge is expected. </p>
+										  </div>
+										</div>
+								</div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    <!-- prevents navbar coverup upon within page navigation-->
+    <!-- prevents navbar coverup upon within page navigation-->
+    <script>
+        $('a').click(function (e) {
+                     e.preventDefault();
+                     var href = $(this).attr('href');
+                     $(document).scrollTop( $(href).offset().top );
+                     window.scrollBy(0, -60);
+                     });
+    </script>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

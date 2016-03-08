@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Epidemic Prediction Initiative</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/maj_desi.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html"> Epidemic Prediction Initiative   <span class="label label-danger">BETA</span></a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+            		<li>
+                		<a href="http://www.hhs.gov/idealab/projects-item/epidemic-prediction-initiative/"> About</a>
+                </li>
+<!--                <li>
+                		<a href="bootstrap-elements.html"> Contact </a>
+                </li> -->
+            </ul>
+        </nav>
+
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <nav class="collapse navbar-inverse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Dengue</a>
+                </li>
+                <li>
+                    <a href="targets.html"><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Targets</a>
+                </li>
+                <li>
+                    <a href="data.html"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Dengue Data</a>
+                </li>
+                <li>
+                    <a href="climate.html"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Environmental Data</a>
+                </li>
+            		<li>
+                    <a href="population.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Population Data</a>
+                </li>
+                <li>
+                    <a href="submit.html"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Submit</a>
+                </li>
+                <li class="active">
+                    <a href="evaluation.html"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Evaluation</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+              <div class="row panel panel-default">
+              <div class="panel-heading">
+              <h4>Forecast evaluation</h4>
+              </div>
+              <div class="panel-body">
+              <p>Forecasts will be quantitatively evaluated for each target using two metrics. Point forecasts will be evaluated using <a href="#rm-absolute-error">relative mean absolute error</a> to assess performance relative to a seasonal autoregressive model and to other forecasts. The probability distributions will be evaluated using the <a href="#logarithmic-score">logarithmic score</a>. For each target, relative MAE and the logarithmic score will be calculated across all seasons and forecast times (week of the season) as well as for specific seasons and forecast time to identify potential differences in model strengths. The primary comparisons will be made for the testing period (2010-2013), however forecasts will also be compared between the training and testing periods to assess how forecast accuracy changes when predicting on data that was excluded from the model development process.</p>
+              IMPORTANT NOTES: A different model may be employed for each target and location. No metrics will be compared across targets.
+              </div>
+              </div>
+              <div id="rm-absolute-error" class="row panel panel-default panel-body">
+              <p><strong>Relative Mean Absolute Error</strong></p>
+              <p>Mean absolute error (MAE) is the mean absolute difference between predictions <span class="math">\(\hat{\mathbf{y}}\)</span> and observations <span class="math">\(\mathbf{y}\)</span> over <span class="math">\(n\)</span> data points:</p>
+              <p><span class="math">\(MAE(\hat{\mathbf{y}}, \mathbf{y})=\frac{1}{n}\sum\limits_{i=1}^{n} \left|\hat{y}_{i}-y_{i}\right|\)</span>.</p>
+              <p>Relative MAE for models A and B is:</p>
+              <p><span class="math">\(relMAE_{A,B}=\frac{MAE_{A}}{MAE_{B}}\)</span></p>
+              <p>An important feature of this metric is that it can be interpreted directly in terms of accuracy of predictions. For example, <span class="math">\(relMAE_{A,B}\)</span> = 0.8 indicates that, on average, predictions from model A were 20% closer to the observed values than those from model B. Additionally, comparing multiple candidate models to a common baseline model with relative MAE allows for the assessment of the relative accuracy of the candidate models. For example, the relative MAE for model A versus the baseline model can be divided by the relative MAE for model B versus the baseline, resulting in the relative MAE for model A versus model B.</p>
+              <p><strong>References</strong></p>
+              <ul>
+              <li><p>Hyndman RJ and AB Koehler. (2006) Another look at measures of forecast accuracy. International Journal of Forecasting. 22(4):679-688. Available at: <a href><a href="http://www.buseco.monash.edu.au/ebs/pubs/wpapers/2005/wp13-05.pdf" class="uri">http://www.buseco.monash.edu.au/ebs/pubs/wpapers/2005/wp13-05.pdf</a></a>.</p></li>
+              <li>Reich NG, J Lessler, K Sakrejda, SA Lauer, S Iamsirithaworn, and DAT Cummings. (2015) Case studies in evaluating time series prediction models using the relative mean absolute error. Available at: <a href>“<a href="http://works.bepress.com/nicholas_reich/11" class="uri">http://works.bepress.com/nicholas_reich/11</a></a>.</li>
+              </ul>
+              </div>
+              <div id="logarithmic-score" class="row panel panel-default panel-body">
+              <p><strong>Logarithmic Score</strong> The logarithmic scoring rule is a proper scoring rule based on a binned probability distribution of the prediction, <span class="math">\(\mathbf{y}\)</span>. The score is the log of the probability assigned to the observed outcome, <span class="math">\(i\)</span>:</p>
+              <p><span class="math">\(S(\mathbf{p},i) = ln(p_{i})\)</span></p>
+              <p>For example, a single prediction for the peak week includes probabilities for each week (1-52) in the season. The probability assigned to a week when the peak is unlikely would be low, near to zero, while the probability assigned to the forecast peak week is the highest. The total of these probabilities across all weeks must equal 1, i.e.:</p>
+              <p><span class="math">\(\sum\limits_{i=1}^{52} p_{i}=1\)</span>.</p>
+              <p>If the observed peak week is week 30 and <span class="math">\(p_{i}\)</span> = 0.15, the score for this prediction is <span class="math">\(log\)</span>(0.15), or approximately -1.9.</p>
+              <p>Note that the logarithmic score is based on a probabilistic estimate - a complete probability distribution over all possible outcomes. This is desirable because it requires the forecaster to consider the entire range of possible outcomes, and to estimate the likelihood if each one of them. Two forecasters may agree on which outcome is the most likely, and therefore submit the same point estimate, which would be scored identically by MAE. However, their predictions may differ substantially on how likely this outcome is, and how likely other outcomes are. By considering this probability, the logarithmic score enables scoring of the confidence in the prediction, not just the value of the point prediction.</p>
+              <p>Another advantage of logarithmic scores is that they can be summed across different time periods, targets, and locations to provide both specific and generalized measures of model accuracy. The bins that will be used for forecasts of the peak week, maximum weekly incidence, and total cases in the season will be specified in the forecast templates.</p>
+              <p><strong>References</strong></p>
+              <ul>
+              <li><p>Gneiting T and AE Raftery. (2007) Strictly proper scoring rules, prediction, and estimation. Journal of the American Statistical Association. 102(477):359-378. Available at: <a href><a href="https://www.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf" class="uri">https://www.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf</a></a>.</p></li>
+              <li>Rosenfeld R, J Grefenstette, and D Burke. (2012) A Proposal for Standardized Evaluation of Epidemiological Models. Available at: <a href><a href="http://delphi.midas.cs.cmu.edu/files/StandardizedEvaluation_Revised_12-11-09.pdf" class="uri">http://delphi.midas.cs.cmu.edu/files/StandardizedEvaluation_Revised_12-11-09.pdf</a></a>.</li>
+              </ul>
+              </div>
+
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- prevents navbar coverup upon within page navigation-->
+    <script>
+        $('a').click(function (e) {
+                     e.preventDefault();
+                     var href = $(this).attr('href');
+                     $(document).scrollTop( $(href).offset().top );
+                     window.scrollBy(0, -60);
+                     });
+    </script>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- dynamically load mathjax for compatibility with self-contained -->
+    <script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script>
+
+
+
+</body>
+
+</html>

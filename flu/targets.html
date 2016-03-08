@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Epidemic Prediction Initiative</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/maj_desi.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"> Epidemic Prediction Initiative   <span class="label label-danger">BETA</span></a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+            		<li>
+                		<a href="http://www.hhs.gov/idealab/projects-item/epidemic-prediction-initiative/"> About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <nav class="collapse navbar-inverse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Influenza</a>
+                </li>
+                <li>
+                    <a href="forecasts.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Forecasts</a>
+                </li>
+                <li class="active">
+                    <a href="targets.html"><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Targets</a>
+                </li>
+                <li>
+                    <a href="data.html"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Data</a>
+                </li>
+                <li>
+                    <a href="evaluation.html"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Evaluation</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+
+
+<div class="row panel panel-default">
+<div class="panel-heading">
+<h3>Forecast Targets</h3>
+</div>
+<div class="panel-body">
+For each week during the influenza season, participants provide national and regional probabilistic forecasts for the entire influenza season (seasonal targets) and for the next four weeks (short-term targets, often referred to as Nowcasts or Nearcasts). The seasonal targets are the <a href="#start-week">start week</a>, the <a href="#peak-week">peak week</a>, and the <a href="#peak-intensity">peak intensity</a> of the 2015-2016 influenza season. The <a href="#short-term">short-term</a> targets are the percent of outpatient visits experiencing ILI one week, two weeks, three weeks, and four weeks ahead from date of the forecast.
+</div>
+</div>
+<div id="start-week" class="row panel panel-default panel-body">
+<h4><strong>Start week</strong></h4>
+<p><strong>DEFINITION</strong></p>
+<p>The start of the season is the MMWR surveillance week when the percentage of visits reported through ILINet reaches or exceeds the baseline value for three consecutive weeks. MMWR week definitions are available at <a href><a href="http://wwwn.cdc.gov/nndss/script/downloads.aspx" class="uri">http://wwwn.cdc.gov/nndss/script/downloads.aspx</a></a> and updated 2015-16 ILINet baseline values for the US and each HHS region are available at <a href><a href="http://www.cdc.gov/flu/weekly/overview.htm" class="uri">http://www.cdc.gov/flu/weekly/overview.htm</a></a>. Forecasted start week values should be for the first week of the three week period.</p>
+<p><strong>MOTIVATION</strong></p>
+Accurate and timely forecasts for the start of the season can be useful in planning for influenza prevention and control activities. For the general public, the start of the season offers an important opportunity to take preventive measures, such as getting vaccinated, before flu becomes widespread. For clinicians and public health authorities, the start of the season indicates that influenza should be high on their list of possible diagnoses for patients with respiratory illness. This is particularly important for the management of hospitalized patients and high-risk patients with suspected influenza when early treatment with influenza antivirals can be critical.
+</div>
+<div id="peak-week" class="row panel panel-default panel-body">
+<h4><strong>Peak week</strong></h4>
+<p><strong>DEFINITION</strong></p>
+<p>The peak week is the MMWR surveillance week with the highest weighted ILINet percentage in the 2015-16 influenza season. MMWR week definitions are available at <a href><a href="http://wwwn.cdc.gov/nndss/script/downloads.aspx" class="uri">http://wwwn.cdc.gov/nndss/script/downloads.aspx</a></a>.</p>
+<p><strong>MOTIVATION</strong></p>
+Accurate and timely forecasts for the peak week can be useful for planning and promoting activities to increase influenza vaccination prior to the bulk of influenza illness. For healthcare, pharmacy, and public health authorities, a forecast for the peak week can guide efficient staff and resource allocation.<br />
+</div>
+<div id="peak-week" class="row panel panel-default panel-body">
+<h4><strong>Peak intensity</strong></h4>
+<p><strong>DEFINITION</strong></p>
+<p>The peak intensity will be defined as the highest numeric value that the weighted ILINet percentage reaches during the 2015-16 influenza season.</p>
+<p><strong>MOTIVATION</strong></p>
+Accurate and timely forecasts for the peak week and intensity of the influenza season can be useful for influenza prevention and control, including the planning and promotion of activities to increase influenza vaccination prior to the bulk of influenza illness. For healthcare, pharmacy, and public health authorities, a forecast for the peak week and intensity can help with appropriate staff and resource allocation since a surge of patients with influenza illness can be expected to seek care and receive treatment in the weeks surrounding the peak.<br />
+</div>
+<div id="short-term" class="row panel panel-default panel-body">
+<h4><strong>Short-term</strong></h4>
+<p><strong>DEFINITION</strong></p>
+<p>Short-term forecasts target for the percent of ILINet outpatient visits experiencing influenza-like illness one week, two weeks, three weeks, and four weeks ahead from date of the forecast.</p>
+<p><strong>MOTIVATION</strong></p>
+<p>Forecasts capable of providing reliable estimates of influenza activity over the next month are critical because they allow healthcare and public health officials to prepare for and respond to near-term changes in influenza activity and bridge the gap between reported incidence data and long-term seasonal forecasts.</p>
+</div>
+
+
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- prevents navbar coverup upon within page navigation-->
+    <script>
+        $('a').click(function (e) {
+                     e.preventDefault();
+                     var href = $(this).attr('href');
+                     $(document).scrollTop( $(href).offset().top );
+                     window.scrollBy(0, -60);
+                     });
+    </script>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- dynamically load mathjax for compatibility with self-contained -->
+		<script>
+		  (function () {
+		    var script = document.createElement("script");
+		    script.type = "text/javascript";
+		    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+		    document.getElementsByTagName("head")[0].appendChild(script);
+		  })();
+		</script>
+
+
+</body>
+
+</html>

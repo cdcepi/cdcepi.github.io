@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app='forecasts'>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Epidemic Prediction Initiative</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/maj_desi.css" rel="stylesheet">
+
+</head>
+
+<body ng-app="forecasts" ng-connection="ForecastController as fcast">
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"> Epidemic Prediction Initiative   <span class="label label-danger">BETA</span></a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+            		<li>
+                		<a href="http://www.hhs.gov/idealab/projects-item/epidemic-prediction-initiative/"> About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <nav class="collapse navbar-inverse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Influenza</a>
+                </li>
+                <li class="active">
+                    <a href="forecasts.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Forecasts</a>
+                </li>
+                <li>
+                    <a href="targets.html"><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Targets</a>
+                </li>
+                <li>
+                    <a href="data.html"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Data</a>
+                </li>
+                <li>
+                    <a href="evaluation.html"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Evaluation</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+
+        <div id="page-wrapper">
+            <div class="container-fluid" ng-controller="ForecastController as fcast">
+
+<div class="row">
+  <div class="btn-group" role="group" aria-label="...">
+    <a href type="button" class="btn btn-default" ng-click="fcast.setReg('nat')" ng-class="{ active: fcast.checkReg('nat')}"> National</a>
+  </div>
+    REGION:
+  <div class="btn-group" role="group" aria-label="...">
+    <a href type="button" class="btn btn-default" ng-click="fcast.setReg('r1')" ng-class="{ active: fcast.checkReg('r1')}"> 1</a>
+    <a href type="button" class="btn btn-default" ng-click="fcast.setReg('r2')" ng-class="{ active: fcast.checkReg('r2')}"> 2</a>
+    <a href type="button" class="btn btn-default" ng-click="fcast.setReg('r3')" ng-class="{ active: fcast.checkReg('r3')}"> 3</a>
+    <a href type="button" class="btn btn-default" ng-click="fcast.setReg('r4')" ng-class="{ active: fcast.checkReg('r4')}"> 4</a>
+    <a href type="button" class="btn btn-default" ng-click="fcast.setReg('r5')" ng-class="{ active: fcast.checkReg('r5')}"> 5</a>
+    <a href type="button" class="btn btn-default" ng-click="fcast.setReg('r6')" ng-class="{ active: fcast.checkReg('r6')}"> 6</a>
+    <a href type="button" class="btn btn-default" ng-click="fcast.setReg('r7')" ng-class="{ active: fcast.checkReg('r7')}"> 7</a>
+    <a href type="button" class="btn btn-default" ng-click="fcast.setReg('r8')" ng-class="{ active: fcast.checkReg('r8')}"> 8</a>
+    <a href type="button" class="btn btn-default" ng-click="fcast.setReg('r9')" ng-class="{ active: fcast.checkReg('r9')}"> 9</a>
+    <a href type="button" class="btn btn-default" ng-click="fcast.setReg('r10')" ng-class="{ active: fcast.checkReg('r10')}"> 10</a>
+  </div>
+  {{fcast.fullName}}
+  <div class="btn-group pull-right" role="group" aria-label="...">
+    <a href="#teams" type="button" class="btn btn-primary"> Team Information</a>
+  </div>
+</div>
+
+<!--<div class="row">
+   <div class="row col-xs-12" style="height:10px;"></div>
+</div>-->
+<div class="row">
+   <div><h5>Last update: March 8, 2016</h5></div>
+</div>
+
+<ul class="nav nav-tabs nav-justified">
+  <li ng-class="{ active: fcast.checkTargets('short-term')}"><a ng-click="fcast.setTargets('short-term')">Short-term Forecasts</a></li>
+  <li ng-class="{ active: fcast.checkTargets('seasonal')}"><a ng-click="fcast.setTargets('seasonal')">Seasonal Forecasts</a></li>
+</ul>
+
+<div class="row">
+   <div class="row col-xs-12" style="height:10px;"></div>
+</div>
+
+<div class="row panel-body">
+  <img ng-src="{{fcast.fImg}}" class="img-responsive"/>
+  <div ng-hide="fcast.checkTargets('seasonal')">*The baseline is an indicator of the influenza season and is two standard deviations above the average ILINet percentage in non-influenza weeks over the previous three years: <a href="http://www.cdc.gov/flu/weekly/overview.htm">www.cdc.gov/flu/weekly/overview.htm</a>.</div>
+</div>
+
+<div class="row panel panel-default">
+  <div class="panel-heading" id="teams">
+    Team Information
+  </div>
+  <div class="panel-body">
+    <ul class="list-group">
+      <li class="list-group-item">CMU-Delphi-Archefilter
+        <a href="http://delphi.midas.cs.cmu.edu/systems/archefilter.html" class="pull-right">http://delphi.midas.cs.cmu.edu/systems/archefilter.html</a>
+      </li>
+      <li class="list-group-item">CMU-Delphi-Stat
+        <a href="http://delphi.midas.cs.cmu.edu/systems/stat.html" class="pull-right">http://delphi.midas.cs.cmu.edu/systems/stat.html</a>
+      </li>
+      <li class="list-group-item">CMU-Delphi-Epicast
+        <a href="http://delphi.midas.cs.cmu.edu/systems/epicast.html" class="pull-right">http://delphi.midas.cs.cmu.edu/systems/epicast.html</a>
+      </li>
+      <li class="list-group-item">Columbia University 1
+        <a href="http://cpid.iri.columbia.edu/" class="pull-right">http://cpid.iri.columbia.edu/</a>
+      </li>
+      <li class="list-group-item">Columbia University 2
+        <a href="http://cpid.iri.columbia.edu/" class="pull-right">http://cpid.iri.columbia.edu/</a>
+      </li>
+      <li class="list-group-item">HumNat Lab
+        <a href="http://www.tc.umn.edu/~matteoc/Welcome.html" class="pull-right">http://www.tc.umn.edu/~matteoc/Welcome.html</a>
+      </li>
+      <li class="list-group-item">Kernel of Truth
+        <a href="https://reichlab.github.io/" class="pull-right">https://reichlab.github.io/</a>
+      </li>
+      <li class="list-group-item">MOBS-Lab, Northeastern University
+        <a href="http://www.mobs-lab.org" class="pull-right">http://www.mobs-lab.org</a>
+      </li>
+      <li class="list-group-item">Predictive Science
+        <a href="http://www.predsci.com" class="pull-right">http://www.predsci.com</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Angular -->
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/forecast.switch.js"></script>
+
+    <!-- dynamically load mathjax for compatibility with self-contained -->
+		<script>
+		  (function () {
+		    var script = document.createElement("script");
+		    script.type = "text/javascript";
+		    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+		    document.getElementsByTagName("head")[0].appendChild(script);
+		  })();
+		</script>
+
+</body>
+
+</html>

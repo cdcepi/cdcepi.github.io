@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Epidemic Prediction Initiative</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/maj_desi.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html"> Epidemic Prediction Initiative   <span class="label label-danger">BETA</span></a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+            		<li>
+                		<a href="http://www.hhs.gov/idealab/projects-item/epidemic-prediction-initiative/"> About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <nav class="collapse navbar-inverse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Dengue</a>
+                </li>
+                <li>
+                    <a href="targets.html"><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Targets</a>
+                </li>
+                <li class="active">
+                    <a href="data.html"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Dengue Data</a>
+                </li>
+                <li>
+                    <a href="climate.html"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Environmental Data</a>
+                </li>
+                <li>
+                    <a href="population.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Population Data</a>
+                </li>
+                <li>
+                    <a href="submit.html"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Submit</a>
+                </li>
+                <li>
+                    <a href="evaluation.html"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Evaluation</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+                <div class="row">
+                		<div class="panel panel-default">
+                				<div class="panel-heading"><h4>Data for developing and evaluating predictions</h4></div>
+										  	<div class="panel-body">
+<p>This page contains links for dengue data for
+<a href="#sanjuan">San Juan, Puerto Rico</a>
+and
+<a href="#iquitos">Iquitos, Peru</a>.
+Initial data was available through the 2008/2009 season for each location for model training and forecasting for the 2005/2006 to 2008/2009 seasons. The complete dataset, including data through the 2012/2013 was provided after the training phase for the testing of fully developed models on the seasons 2009/2010 to 2012/2013.
+</p>
+										 		</div>
+										</div>
+								</div>
+						</div>
+
+						<div class="container-fluid">
+								<div class="row">
+										<div class="panel panel-default">
+												<div class="panel-body" id="sanjuan">
+<p><strong>San Juan, Puerto Rico - 1990/1991 to 2012/2013</strong></p>
+<p>This dataset includes the number of laboratory-positive dengue cases by week for the San Juan-Carolina-Caguas Metropolitan Statistical Area. The data covers the 1990/1991 to 2008/2009 dengue seasons and includes serotype-specific incidence. Complete details can be found in the
+<a href="data/metadata-san_juan_training.html" target="_blank">metadata</a>.
+</p>
+<p><strong>Training data - 1990/1991 to 2008/2009</strong></p>
+<a class="btn btn-default btn-md btn-primary" href="data/San_Juan_Training_Data.csv">Download Data</a>
+<a class="btn btn-default btn-md btn-info" href="data/metadata-san_juan_training.html" target="_blank">View Metadata</a>
+<br/><br/>
+<p><strong>Testing data - 1990/1991 to 2012/2013</strong></p>
+<a class="btn btn-default btn-md btn-primary" href="data/San_Juan_Testing_Data.csv">Download Data</a>
+<a class="btn btn-default btn-md btn-info" href="data/metadata-san_juan_testing.html" target="_blank">View Metadata</a>
+  											</div>
+										</div>
+								</div>
+						</div>
+
+						<div class="container-fluid">
+								<div class="row">
+										<div class="panel panel-default">
+												<div class="panel-body" id="iquitos">
+<p><strong>Iquitos, Peru - 2000/2001 to 2012/2013</strong></p>
+<p>This dataset includes the number of laboratory-positive dengue cases by week for Iquitos, Peru. The data covers the 2000/2001 to 2008/2009 dengue seasons and includes serotype-specific incidence. Complete details can be found in the
+<a href="data/metadata-iquitos_training.html" target="_blank">metadata</a>.
+</p>
+<p><strong>Training data - 2000/2001 to 2008/2009</strong></p>
+<a class="btn btn-default btn-md btn-primary" href="data/Iquitos_Training_Data.csv">Download Data</a>
+<a class="btn btn-default btn-md btn-info" href="data/metadata-iquitos_training.html" target="_blank">View Metadata</a>
+<br/><br/>
+<p><strong>Testing data - 2000/2001 to 2012/2013</strong></p>
+<a class="btn btn-default btn-md btn-primary" href="data/Iquitos_Testing_Data.csv">Download Data</a>
+<a class="btn btn-default btn-md btn-info" href="data/metadata-iquitos_testing.html" target="_blank">View Metadata</a>
+  											</div>
+										</div>
+								</div>
+						</div>
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+		<!-- dynamically load mathjax for compatibility with self-contained -->
+		<script>
+		  (function () {
+		    var script = document.createElement("script");
+		    script.type = "text/javascript";
+		    script.src  = "../js/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+		    document.getElementsByTagName("head")[0].appendChild(script);
+		  })();
+		</script>
+
+</body>
+
+</html>

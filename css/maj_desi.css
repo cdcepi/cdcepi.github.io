@@ -1,0 +1,34 @@
+
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+
+.inverse-dropdown {
+  background-color: #222;
+  border-color: #080808;
+  &>li>a{
+    color: #999;
+    &:hover{
+      color: #fff;
+      background-color: #000;
+    }
+  }
+  &>.divider {
+    background-color: #000;
+  }
+}
+
+/*.navbar-collapse.in {
+    overflow-y: visible;
+}*/
+
+ /*.navbar {
+     padding-bottom: 20px;
+ }*/
+
+.navbar-sub> .active > a,
+.navbar-sub> .active > a:hover,
+.navbar-sub> .active > a:focus {
+  color: #fff;
+}
